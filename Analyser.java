@@ -22,6 +22,8 @@ public class Analyser {
             count = input.length();
         }
 
+        //switch case checks for number of digits
+
         switch (count){
             case 1: result.append("one-digit");
             break;
