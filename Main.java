@@ -57,6 +57,7 @@ public class Main {
                 System.out.println("You entered a " + inputLength + "-digit " + "positive number.");
             }
 
+            // Catch any exception
         } catch (Exception e) {
             e.printStackTrace();
         }
