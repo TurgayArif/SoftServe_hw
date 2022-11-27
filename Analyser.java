@@ -12,6 +12,8 @@ public class Analyser {
 
         int count = 0;
 
+        // check if first char is "-"
+
         if (input.equals("0")){
             result.append("neutral");
         } else if ( input.charAt(0) == '-'){
