@@ -12,6 +12,8 @@ public class Analyser {
 
         int count = 0;
 
+        // check if first char is "-"
+
         if (input.equals("0")){
             result.append("neutral");
         } else if ( input.charAt(0) == '-'){
@@ -21,6 +23,8 @@ public class Analyser {
             result.append("positive ");
             count = input.length();
         }
+
+        //switch case checks for number of digits
 
         switch (count){
             case 1: result.append("one-digit");
