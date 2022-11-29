@@ -37,13 +37,13 @@ public class Dictionary {
 
     public static String findCity(String input, Map<String, List<String>> countries){
 
-        String result = "No such country in database";
+        String result = "No such city in database";
 
         for (Map.Entry<String, List<String>> entry : countries.entrySet()){
 
             for (String city: entry.getValue()){
 
-                if (city.equals(input)){
+                if (city.equalsIgnoreCase(input)){
                     result = entry.getKey();
                     break;
                 }
