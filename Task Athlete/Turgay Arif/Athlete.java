@@ -13,18 +13,19 @@ public class Athlete {
         var daysToHundred = 2;
 
         var increaseDailyRate = 0.1;
-        System.out.printf(String.format(Locale.US,"Day: %d | %.2f km. %n", 1, km));
+
+        var totalDistance = 0;
         do {
             km += (km * increaseDailyRate);
-            System.out.printf(String.format(Locale.US,"Day: %d | %.2f km. %n", daysToHundred, km));
+            totalDistance += km;
             if (km < 20) {
                 daysToTwenty++;
             }
-            if (km < 100) {
+            if (totalDistance < 100) {
                 daysToHundred++;
             }
-        } while (km < 100);
+        } while (totalDistance < 100);
 
-        System.out.printf("Days to 20 km: %d %nDays to 100 km: %d", daysToTwenty, daysToHundred);
+        System.out.printf("Days to 20 km: %d %nDays to 100 km. total distance: %d", daysToTwenty, daysToHundred);
     }
 }
