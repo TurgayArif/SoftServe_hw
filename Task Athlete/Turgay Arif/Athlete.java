@@ -9,22 +9,23 @@ public class Athlete {
 
         double km = sc.nextDouble();
 
-        var daysToTwenty = 2;
-        var daysToHundred = 2;
+        var daysToTwenty = 1;
+        var daysToHundred = 1;
 
         var increaseDailyRate = 0.1;
 
-        var totalDistance = 0;
+        var totalDistance = km;
         do {
-            km += (km * increaseDailyRate);
-            totalDistance += km;
-            if (km < 20) {
+            if (km <= 20) {
                 daysToTwenty++;
             }
-            if (totalDistance < 100) {
+            km += (km * increaseDailyRate);
+
+            if (totalDistance <= 100) {
                 daysToHundred++;
             }
-        } while (totalDistance < 100);
+            totalDistance += km;
+        } while (km <= 20 || totalDistance <= 100);
 
         System.out.printf("Days to 20 km: %d %nDays to 100 km. total distance: %d", daysToTwenty, daysToHundred);
     }
