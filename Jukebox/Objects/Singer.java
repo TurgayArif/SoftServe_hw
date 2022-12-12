@@ -1,10 +1,12 @@
+package Objects;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class Singer {
+public abstract class Singer{
 
     private String name;
-    private List<String> repertoire;
     private Map<String, List<String>> albums;
 
     public Singer(String name, Map<String, List<String>> albums) {
@@ -20,9 +22,6 @@ public abstract class Singer {
         this.name = name;
     }
 
-    public List<String> getRepertoire() {
-        return repertoire;
-    }
 
     public Map<String, List<String>> getAlbums() {
         return albums;
@@ -32,8 +31,19 @@ public abstract class Singer {
         this.albums = albums;
     }
 
-    public void addSongToRepertoire(String song){
 
-        this.repertoire.add(song);
+
+    public void singAlbum(String album){
+        getAlbums().get(album).forEach(System.out::println);
+    }
+
+
+    public void singAll(){
+        for (Map.Entry<String, List<String>> entry : getAlbums().entrySet()) {
+
+            System.out.println(entry.getValue());
+            entry.getValue().forEach(System.out::println);
+            System.out.println();
+        }
     }
 }
