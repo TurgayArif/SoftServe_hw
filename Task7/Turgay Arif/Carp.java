@@ -6,14 +6,8 @@ public class Carp extends Fish {
     }
 
     public Carp(double weight, String color) {
-        setWeight(weight);
+        super(weight);
         this.color = color;
-    }
-
-    public static void createCarpFish(double weight, String color) {
-        Carp carp = new Carp(weight, color);
-        Fish.getFishList().add(carp);
-        System.out.println("Successfully created " + carp);
     }
 
     @Override

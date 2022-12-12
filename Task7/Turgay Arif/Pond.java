@@ -4,16 +4,12 @@ import java.util.Random;
 
 public class Pond {
 
-    private List<Fish> capacity;
-    private enum States {
-        POOR,
-        NORMAL,
-        RICH
-    };
+    private static List<Fish> capacity;
+
     private States state;
 
     public Pond() {
-        this.capacity = new ArrayList<>();
+        capacity = new ArrayList<>();
         setState();
     }
 
@@ -37,8 +33,7 @@ public class Pond {
 
     public void addFish(Fish fish) {
         capacity.add(fish);
-        Fish.getFishList().remove(fish);
-        System.out.println("Successfully added " + capacity.get(capacity.size()-1).toString() + " to the Pond!");
+        System.out.println("Successfully added " + capacity.get(capacity.size() - 1).toString() + " to the Pond!");
         setState();
     }
 
@@ -60,4 +55,5 @@ public class Pond {
         }
 
     }
+
 }
