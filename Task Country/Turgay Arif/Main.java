@@ -10,7 +10,7 @@ public class Main {
 
         bulgaria.display();
 
-        bulgaria.setContinent("Europe");
+        bulgaria.setContinent(Continents.EUROPE);
 
         bulgaria.display();
     }
