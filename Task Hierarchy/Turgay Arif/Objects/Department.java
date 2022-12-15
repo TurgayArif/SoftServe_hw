@@ -10,9 +10,16 @@ public abstract class Department {
     private int departmentId;
 
 
-    public Department(int id, DeptNames deptName) {
-        this.departmentId = id;
-        this.departmentName = deptName;
+    public void setDepartmentName(DeptNames departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public int getDepartmentId() {
+        return departmentId;
     }
 
     public abstract void callEmployee(Employee employees);

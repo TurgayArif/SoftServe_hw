@@ -7,7 +7,8 @@ import java.time.LocalTime;
 public class CEO extends Department {
 
     public CEO(int id) {
-        super(id, DeptNames.CEO);
+        setDepartmentId(id);
+        setDepartmentName(DeptNames.CEO);
     }
 
     @Override
