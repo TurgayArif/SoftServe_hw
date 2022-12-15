@@ -7,7 +7,8 @@ import java.time.LocalTime;
 public class HR extends Department {
 
     public HR(int id) {
-        super(id, DeptNames.HR);
+        setDepartmentId(id);
+        setDepartmentName(DeptNames.HR);
     }
 
     @Override
